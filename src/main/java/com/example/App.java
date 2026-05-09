@@ -11,7 +11,7 @@ public class App {
 
     @GetMapping("/")
     public String home() {
-        return "DevOps CI/CD Pipeline Running Successfully";
+        return "DevOps CI/CD Pipeline Running Successfully on minikube cluster on AWS EC2 instance";
     }
 
     public static void main(String[] args) {
