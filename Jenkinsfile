@@ -31,7 +31,7 @@ pipeline {
 		withCredentials([usernamePassword(
 			credentialsID: 'docker-creds',
 			usernameVariable: 'DOCKER_USER',
-			passwordVariable: "DOCKER_PASS'
+			passwordVariable: 'DOCKER_PASS'
 		)]) {
 			sh 'echo $DOCKER_PASS } sudo docker login -u $DOCKER_USER --password-stdin'
 			sh 'sudo docker push rferns/webapp:latest'
