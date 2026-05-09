@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+
+kind: Deployment
+
+metadata:
+  name: webapp-deployment
+
+spec:
+  replicas: 2
+
+  selector:
+    matchLabels:
+      app: webapp
+
+  template:
+    metadata:
+      labels:
+        app: webapp
+
+    spec:
+      containers:
+        - name: webapp
+
+          image: rferns/webapp:latest
+
+          imagePullPolicy: Always
+
+          ports:
+            - containerPort: 8080
